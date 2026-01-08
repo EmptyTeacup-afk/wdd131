@@ -1,0 +1,38 @@
+
+h1, h2, p{
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+hr {
+    max-width: 50%;
+    margin-bottom: 3%;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 10px;
+    color: lightblue;
+    font-size: 1em;
+}
+
+img {
+    display: block;
+    margin: 50px auto;
+    max-width: 20%;
+} 
+
+#content li{
+    text-align: left;
+    max-width: 50%;
+    margin: 1em auto;
+}
+
+#italic-line {
+    font-style: italic;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
