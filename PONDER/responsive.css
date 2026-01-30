@@ -42,7 +42,7 @@ nav a {
     border-top: 1px solid gray;
 }
 
-.hiden {
+.hide {
     display: none;
 }
 
@@ -71,7 +71,7 @@ nav a:hover {
 .change .bar2 {opacity: 0;}
 
 .change .bar3 {
-  transform: translate(0, 8.5px) rotate(45deg);
+  transform: translate(0, -8.5px) rotate(45deg);
 }
 
 footer {
