@@ -88,11 +88,7 @@ dialog {
     section {
         grid-template-columns: 1fr 1fr;
     }
-
-    nav a {
-        text-decoration: none;
-    }
-
+ 
     .gallery {
         display: grid;
         grid-template-columns: 1fr 1fr;
