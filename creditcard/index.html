@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="creditcard.css">
+    <script src="creditcard.js" defer></script>
+    <meta author="Reece Beaumont-Thomas" />
+</head>
+<body>
+    <main>
+        <section class="errors"></section>
+        <form id="checkoutForm">
+            <div class="payment-container">
+                <div class="card back">
+                    <div class="magnetic-stripe"></div>
+                    <div class="cvc-section">
+                        <label for="cvc">CVC/CVV</label>
+                        <input type="text" id="cvc" placeholder="xxx" maxlength="4">
+                    </div>
+                </div>
+
+                <div class="card front">
+                    <div class="card-header">
+                        <span class="total-label">TOTAL: $199</span>
+                        <div class="chip-icon">💳 </div> </div>
+
+                    <div class="field-group">
+                        <label for="creditCardNumber">CARD NUMBER</label>
+                        <input type="text" id="creditCardNumber" placeholder="1234 5678 9101 1020">
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="field-group holder">
+                            <label for="cardHolder">CARD HOLDER</label>
+                            <input type="text" id="cardHolder" placeholder="John Doe">
+                        </div>
+                        <div class="field-group expiration">
+                            <label>EXPIRATION</label>
+                            <div class="exp-inputs">
+                                <input type="text" id="month" placeholder="MM" maxlength="2">
+                                <input type="text" id="year" placeholder="YY" maxlength="2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
