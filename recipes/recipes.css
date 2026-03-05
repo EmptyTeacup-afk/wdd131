@@ -1,0 +1,154 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1em;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 30px;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 1.5em;
+}
+
+.header img {
+    width: auto;
+    height: 8em;
+    object-fit: contain;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000; 
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.search-container input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* This creates the box on the right with the vertical divider */
+.search-icon-box {
+    background: white;
+    border: none;
+    border-left: 2px solid #000; 
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.search-image {
+    width: 20px;  
+    height: 20px;
+    display: block;
+    object-fit: contain;
+}
+
+hr {
+    max-width: 95%;
+}
+
+/* Media Card */
+.media-card-container {
+    display: flex;
+    border: 2px solid #000;
+    border-radius: 25px;
+    justify-content: center;
+    flex-direction: column;
+}
+.media-card {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.media-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+button {
+    align-self: flex-start;
+    
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Amatic SC', sans-serif;
+    color:dodgerblue;
+    font-size: 3em;
+}
+
+.rating {
+    margin-top: 0;
+}
+
+.media-card-content{
+    display: none;
+}
+
+/* footer */
+.site-footer {
+    display: flex;
+    gap: 1em;
+    flex-direction: column-reverse; 
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+   
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.social img {
+    width: 32px; 
+    height: 32px; 
+    display: block;
+    object-fit: contain;
+    padding-top: 20px;
+}
+
+@media screen and (min-width: 720px) {
+    .media-card-content {
+        display: contents;
+    }
+
+    .media-card {
+        flex-direction: row;
+    }
+
+    .media-card button {
+        margin-bottom: 4em;
+        font-size: 2em;
+    }
+    
+    .site-footer {
+        flex-direction: row;
+    }
+
+}
+     
