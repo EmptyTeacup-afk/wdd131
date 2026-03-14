@@ -68,8 +68,7 @@ hr {
 /* Media Card */
 .media-card-container {
     display: flex;
-    border: 2px solid #000;
-    border-radius: 25px;
+
     justify-content: center;
     flex-direction: column;
 }
@@ -78,6 +77,9 @@ hr {
     gap: 1em;
     flex-direction: column;
     padding: 15px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    margin-bottom: 10px;
 }
 
 .media-card img {

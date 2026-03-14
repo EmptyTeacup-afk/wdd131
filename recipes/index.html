@@ -6,6 +6,7 @@
     <title>Recipes</title>
     <meta author="Reece Beaumont-Thomas" />
     <link rel="stylesheet" href="recipes.css">
+    <script src="recipes.js" defer></script>
     <!--Font-->
     <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
 
@@ -36,38 +37,14 @@
     </header>
     <main>
         <div class="search-container">
-            <input type="text" placeholder="Find a recipe" aria-label="Search">
-            <button type="submit" class="search-icon-box">
+            <input id="search" type="text" placeholder="Find a recipe" aria-label="Search">
+            <button class="search-icon-box">
                 <img src="images/search.svg" alt="Search" class="search-image">
             </button>
         </div>
         <hr>
         <section class="media-card-container">
-            <section class="media-card">
-                <div class="media-card-image">
-                    <img src="images/apple-crisp.jpg" alt="Apple Crisp"> 
-                </div>
-                <div class="media-card-large">
-                <button>dessert</button>
-                <h2>Apple Crisp</h2>
-                
-                <span
-                class="rating"
-                role="img"
-                aria-label="Rating: 4 out of 5 stars"
-                >
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star-empty">☆</span>
-                </span>
-                
-                <div class="media-card-content">
-                    <p>This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
-                </div>
-            </div>
-            </section>
+           
         </section>
     </main>
 </body>
