@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Fighter</title>
+    <meta author ='Reece Beuamont-Thomas'>
+    <link rel="stylesheet" href="monsterhunter.css">
+    <script src="monsterhunter.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/MonsterFighterLogo.png" alt="Monster Fighter logo">
+        <nav>
+            <hr>
+            <a href="index.html">Battle</a>
+            <a href="Database">Database</a>
+            <hr>
+        </nav>
+    </header>
+    <main>
+        <div id="game-container">
+            <div class="player-column">
+    <div class="selection">
+        <label for="player-one-select">Player one's monster</label>
+        <select id="player-one-select">
+            <option value="dragon">Dragon</option>
+            <option value="golem">Golem</option>
+            <option value="griffen">Griffen</option>
+            <option value="hydra">Hydra</option>
+            <option value="kraken">Kraken</option>
+        </select>
+    </div> 
+
+    <section class="card" id="p1-card"> <img class="image" src="images/Dragon_MonsterFighter.png" alt="Dragon">
+        <h1 class="name" id="p1-name"></h1> <div class="stats">
+            <p>Class: <span id="p1-class">Fire</span></p>
+            <p>Level: <span id="p1-level">10</span></p>
+            <p>Health: <span id="p1-health">500</span></p>
+        </div>
+        <div class="buttons">
+            <button class="attack-btn">Attacked</button> <button class="heal-btn">Heal</button>
+        </div>
+    </section>
+</div>
+
+<div class="player-column">
+    <div class="selection"> <label for="player-two-select">Player two's monster</label>
+        <select id="player-two-select">
+            <option value="dragon">Dragon</option>
+            <option value="golem" selected>Golem</option>
+            <option value="griffen">Griffen</option>
+            <option value="hydra">Hydra</option>
+            <option value="kraken">Kraken</option>
+        </select>
+    </div>
+    <section class="card" id="p2-card"> <img class="image" src="images/Golem_MonsterFighter.png" alt="Golem">
+        <h1 class="name" id="p2-name"></h1> <div class="stats">
+            <p>Class: <span id="p2-class">Earth</span></p>
+            <p>Level: <span id="p2-level">8</span></p>
+            <p>Health: <span id="p2-health">700</span></p>
+        </div>
+        <div class="buttons">
+            <button class="attack-btn">Attacked</button>
+            <button class="heal-btn">Heal</button>
+        </div>
+    </section>
+</div>
+
+       
+    </main>
+    <footer>
+       
+    </footer>
+</body>
+</html>
