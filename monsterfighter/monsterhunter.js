@@ -67,6 +67,21 @@ function healMonster(healNum) {
     targetHealthEl.textContent = targetHealth
 }
 
+// function to handle end turn logic
+function endTurn(playerNum) {
+    const nextPlayer = (playerNum === 1) ? 2 : 1;
+    // get the card for player
+    const card = document.getElementById(`p${nextPlayer}-card`);
+    // get the name label for the player
+    const nameLabel = card.querySelector('.name');
+    // change the style
+    nameLabel.style.backgroundColor = 'yellow';
+    // reset the name label
+    const resetCard = document.getElementById(`p${playerNum}-card`);
+    const resetLabel = resetCard.querySelector('.name');
+    resetLabel.style.backgroundColor = '#5d747b';
+}
+
 // Wait for the window to load to ensure elements exist
 window.onload = () => {
     const select1 = document.getElementById('player-one-select');
@@ -89,6 +104,13 @@ window.onload = () => {
 
     p1HealBtn.addEventListener('click', () => healMonster(1));
     p2HealBtn.addEventListener('click', () => healMonster(2));
+
+    // Link the buttons to the end turn logic
+    const p1EndBtn = document.querySelector('#p1-card .end-btn');
+    const p2EndBtn = document.querySelector('#p2-card .end-btn');
+
+    p1EndBtn.addEventListener('click', () => endTurn(1));
+    p2EndBtn.addEventListener('click', () => endTurn(2));
 
     // Set initial state
         updateMonster(1);

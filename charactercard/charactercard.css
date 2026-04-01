@@ -56,3 +56,37 @@
     background-color: #58605a;
   }            
                     
+
+/* Mobile Styles (Screens smaller than 768px) */
+@media screen and (max-width: 768px) {
+    #game-container {
+        flex-direction: column; /* Stack players on top of each other */
+        align-items: center;
+        gap: 30px;
+    }
+
+    .card {
+        width: 90%; /* Let the card fill the phone screen width */
+        max-width: 400px;
+        margin: 10px auto;
+    }
+
+    .image {
+        height: auto; /* Prevent images from stretching */
+    }
+
+    header img {
+        width: 80%; /* Make the logo bigger on small screens */
+    }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap; /* Wrap buttons if they don't fit in one row */
+        justify-content: center;
+    }
+    
+    button {
+        margin: 5px; /* Tighter spacing for thumb-tapping */
+        padding: 12px 20px; /* Larger "tap targets" for fingers */
+    }
+}
