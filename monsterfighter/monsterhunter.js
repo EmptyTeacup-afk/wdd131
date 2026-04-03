@@ -75,7 +75,7 @@ function endTurn(playerNum) {
     // get the name label for the player
     const nameLabel = card.querySelector('.name');
     // change the style
-    nameLabel.style.backgroundColor = 'yellow';
+    nameLabel.style.backgroundColor = '#FCAE42ff';
     // reset the name label
     const resetCard = document.getElementById(`p${playerNum}-card`);
     const resetLabel = resetCard.querySelector('.name');

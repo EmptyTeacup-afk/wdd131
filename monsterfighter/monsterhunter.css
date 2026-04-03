@@ -11,6 +11,25 @@ header img {
     object-fit: contain;
 }
 
+nav {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    color:#8D5A43ff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+hr {
+    width: 50%;
+    border: 0;
+    border-top: 1px solid #5d747b; /* Customizing the look */
+}
+
 .drop-down {
     display: flex;
     flex-direction: row;
@@ -37,7 +56,7 @@ header img {
 }
 
 .card {
-    background: #313131;
+    background: #8D5A43ff;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.9);
     width: 400px; 
@@ -56,7 +75,7 @@ header img {
     margin: -4px 0 20px 0;
     color: white;
     padding: 15px 0 15px 35px;
-    background-color: #5d747b;
+    background-color: #65A0C1ff;
   }
 
   .stats {
@@ -78,7 +97,7 @@ header img {
     margin: 20px;
     border: none;
     border-radius: 8px;
-    background-color: #5d747b;
+    background-color: #65A0C1ff;
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -88,7 +107,11 @@ header img {
   button:hover {
     background-color: #58605a;
   }            
-      
+
+  /*Set p1 card to yellow as p1 always first player*/
+  #p1-card .name {
+    background-color: #FCAE42ff;
+  }
 
   /* Mobile Styles (Screens smaller than 768px) */
 @media screen and (max-width: 768px) {
