@@ -82,6 +82,62 @@ function endTurn(playerNum) {
     resetLabel.style.backgroundColor = '#5d747b';
 }
 
+// ------- Database page functions -------
+
+function search() {
+    const mediaContainer = document.querySelector('.media-card-container');
+    const monsterQuery = document.querySelector('#search').value.toLowerCase();
+    
+    // Convert the Object into an Array so we can use .filter()
+    const monsterArray = Object.values(monsterData);
+
+    // Filter the monsters based on name or class
+    let filteredMonsters = monsterArray.filter(function(monster) {
+        return (
+            monster.name.toLowerCase().includes(monsterQuery) ||
+            monster.class.toLowerCase().includes(monsterQuery)
+        );
+    });
+
+    // Clear and Re-render
+    mediaContainer.innerHTML = '';
+    filteredMonsters.forEach(function(monster) {
+        mediaContainer.innerHTML += cardTemplate(monster);
+    });
+
+    // Show "Not Found" message if list is empty
+    if (filteredMonsters.length === 0) {
+        mediaContainer.innerHTML = `<p style="color: white; text-align: center; width: 100%;">No monsters found matching "${monsterQuery}"</p>`;
+    }
+}
+
+// function for template
+function cardTemplate(monsterData) {
+    return `
+    <section class="card">
+        <img class="image" src="${monsterData.img}" alt="${monsterData.name}">
+        <h1 class="name">${monsterData.name}</h1>
+        <div class="stats">
+            <p>Class: <span>${monsterData.class}</span></p>
+            <p>Health: <span>${monsterData.health}</span></p>
+            <p>Attack: <span>${monsterData.attack}</span></p>
+        </div>
+    </section>`
+}
+
+function renderAllMonsters() {
+    const mediaContainer = document.querySelector('.media-card-container');
+    if (!mediaContainer) return;
+
+    mediaContainer.innerHTML = ''; // Clear container
+    for (const key in monsterData) {
+        mediaContainer.innerHTML += cardTemplate(monsterData[key]);
+    }
+}
+
+
+
+
 // Wait for the window to load to ensure elements exist
 window.onload = () => {
     const select1 = document.getElementById('player-one-select');
@@ -117,5 +173,24 @@ window.onload = () => {
         updateMonster(2);
     } else {
         console.error("Could not find select elements! Check your HTML IDs.");
+    }
+
+// Check for DATABASE page elements
+    const dbCheck = document.querySelector('.media-card-container');
+    if (dbCheck) {
+        renderAllMonsters();
+        
+        // Link the search bar to the search function
+        const searchInput = document.querySelector('#search');
+        const searchBtn = document.querySelector('.search-icon-box');
+
+        // searches as you type
+        if (searchInput) {
+            searchInput.addEventListener('input', search);
+        }
+        // searches when button is clicked
+        if (searchBtn) {
+            searchBtn.addEventListener('click', search);
+        }
     }
 };
